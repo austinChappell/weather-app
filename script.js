@@ -5,16 +5,16 @@ $(document).ready(function(){
       var long = position.coords.longitude;
       $.getJSON('https://api.apixu.com/v1/forecast.json?key=4f84dfb360a044b1a52170503170605&q=' + lat + ',' + long + '&days=10', function(json){
         var dayHighC = function(dayIndex) {
-          return Math.floor(json.forecast.forecastday[dayIndex].day.maxtemp_c);
+          return Math.round(json.forecast.forecastday[dayIndex].day.maxtemp_c);
         };
         var dayHighF = function(dayIndex) {
-          return Math.floor(json.forecast.forecastday[dayIndex].day.maxtemp_f);
+          return Math.round(json.forecast.forecastday[dayIndex].day.maxtemp_f);
         };
         var dayLowC = function(dayIndex) {
-          return Math.floor(json.forecast.forecastday[dayIndex].day.mintemp_c);
+          return Math.round(json.forecast.forecastday[dayIndex].day.mintemp_c);
         };
         var dayLowF = function(dayIndex) {
-          return Math.floor(json.forecast.forecastday[dayIndex].day.mintemp_f);
+          return Math.round(json.forecast.forecastday[dayIndex].day.mintemp_f);
         };
 
         var fillForecast = function(hi, lo, unit) {

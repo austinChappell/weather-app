@@ -117,7 +117,7 @@ if (navigator.geolocation) {
         metricBtn.classList.add('active');
         imperialBtn.classList.remove('active');
         temp.innerHTML = `${ tempC }&deg;C`;
-        wind.textContent = `Wind speed is ${ windKPH } mi/h from ${ windDir }`;
+        wind.textContent = `Wind speed is ${ windKPH } km/h from ${ windDir }`;
         fillForecast(dayHighC, dayLowC, 'C');
       };
 
